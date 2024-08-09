@@ -7,11 +7,11 @@ export default {
         roboto: ["Roboto", "sans-serif"],
       },
       gridTemplateColumns: {
-        "70/30": "70% 28%",
-      },
+        '70/30': '70% 28%',
+      }
     },
     daisyui: {
-      themes: ["light"],
+      themes: ["night"],
     },
   },
   plugins: [require("daisyui")],
