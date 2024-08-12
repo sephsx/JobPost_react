@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Card from './Card'
 const HomeCards = () => {
    return (
@@ -9,12 +10,12 @@ const HomeCards = () => {
                   <Card>
                      <h2 className='text-2xl font-bold text-black'>For Developers</h2>
                      <p className='mt-2 mb-4 text-black'>Browse our Jobs and Start your career today</p>
-                     <a href="#" className='inline-block bg-indigo-500 text-white rounded-lg px-4 py-2 hover:bg-indigo-600'>Add Job</a>
+                     <Link to="/add-job" className='inline-block bg-indigo-500 text-white rounded-lg px-4 py-2 hover:bg-indigo-600'>Add Job</Link>
                   </Card>
                   <Card bg='bg-indigo-100'>
                      <h2 className='text-2xl font-bold text-black'>For Companies</h2>
                      <p className='mt-2 mb-4 text-black'>Browse our Jobs and Start your career today</p>
-                     <a href="#" className='inline-block bg-indigo-500 text-white rounded-lg px-4 py-2 hover:bg-indigo-600'>Browse Job</a>
+                     <Link to="/jobs" className='inline-block bg-indigo-500 text-white rounded-lg px-4 py-2 hover:bg-indigo-600'>Browse Job</Link>
                   </Card>
 
                </div>

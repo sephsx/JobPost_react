@@ -1,4 +1,4 @@
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import React from 'react'
 import logo from '../assets/img/logo.png'
 
@@ -18,7 +18,7 @@ const Navbar = () => {
                               alt="React Job"
                            />
                            <span className="hidden md:block text-white text-2xl font-bold ml-2">JobSicker</span>
-                     </Link>
+                        </Link>
                      </div>
                   </div>
                   <div className=" lg:flex lg:space-x-4">
