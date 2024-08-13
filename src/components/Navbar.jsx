@@ -1,8 +1,12 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import React from 'react'
 import logo from '../assets/img/logo.png'
 
 const Navbar = () => {
+   const linkClass = ({ isActive }) =>
+      isActive
+         ? 'bg-black text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2'
+         : 'text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2';
    return (
       <>
          <nav className='bg-indigo-700 border-b border-indigo-500'>
@@ -10,7 +14,7 @@ const Navbar = () => {
                <div className="flex h-20 items-center justify-between lg:justify-between">
                   <div className="flex flex-1 items-center justify-center md:items-stretch lg:justify-start">
                      <div className="flex flex-shrink-0 items-center">
-                        <Link className='flex flex-shrink-0 items-center mr-4'
+                        <NavLink className='flex flex-shrink-0 items-center mr-4'
                            to="/">
                            <img
                               className="block h-8 w-auto lg:hidden md:hidden sm:hidden"
@@ -18,13 +22,13 @@ const Navbar = () => {
                               alt="React Job"
                            />
                            <span className="hidden md:block text-white text-2xl font-bold ml-2">JobSicker</span>
-                        </Link>
+                        </NavLink>
                      </div>
                   </div>
                   <div className=" lg:flex lg:space-x-4">
-                     <Link to="/" className="text-white hover:text-indigo-300 px-3 py-2 rounded-md text-sm font-medium">Home</Link>
-                     <Link to="/jobs" className="text-white hover:text-indigo-300 px-3 py-2 rounded-md text-sm font-medium">Jobs</Link>
-                     <Link to="/add-job" className="text-white hover:text-indigo-300 px-3 py-2 rounded-md text-sm font-medium">Add Job</Link>
+                     <NavLink to="/" className={linkClass}>Home</NavLink>
+                     <NavLink to="/jobs" className={linkClass}>Jobs</NavLink>
+                     <NavLink to="/add-job" className={linkClass}>Add Job</NavLink>
                   </div>
                </div>
             </div>
@@ -34,3 +38,6 @@ const Navbar = () => {
 }
 
 export default Navbar
+
+
+
